@@ -3,6 +3,8 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 from measurement import Measurement
+from helpers import neg_checked
+from helpers import insert_sort
 
 yield_values = []
 strain_yield = []
@@ -21,13 +23,13 @@ strain_fracture = []
 # 155, 218, 195
 # 0.03, 0.07, 0.15
 
-def neg_checked(table):
-    for element in table:
-        if float(element) < 0:
-            print("Only provide positive values")
-            return 1
-        else:
-            return 0
+# def neg_checked(table):
+#     for element in table:
+#         if float(element) < 0:
+#             print("Only provide positive values")
+#             return 1
+#         else:
+#             return 0
 
 for i in range (3):
     stress_values = input("Please indicate yield, tensile and fracture stress values (in MPa) for experiment {x}, respectively ".format(x=i+1))
@@ -55,16 +57,6 @@ print(strain_yield)
 print(strain_tensile)
 print(strain_fracture)
 
-def insert_sort(arr): #taken from pp7 homework
-    n = len(arr)
-    for i in range(n):
-        key = arr[i]
-        j = i-1
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j = j - 1
-        arr[j + 1] = key
-    return arr
 
 sorted_yield_values = insert_sort(yield_values)
 sorted_tensile_values = insert_sort(tensile_values)

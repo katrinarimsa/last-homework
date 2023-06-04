@@ -12,6 +12,6 @@ Plot requirements:
 3) Sorts the data in ascending order (loop)
 4) Considers the second value for each point
 5) Measurements are in a class
-6) Plotting the graph is a method in class
-7) Pytest for sorting and positive number functions
+6) Plotting the graph as a method in class
+7) Pytest for sorting and positive number functions is implemented
 
