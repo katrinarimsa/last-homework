@@ -3,14 +3,7 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 from measurement import Measurement
-''''
-x = np.linspace(0, 2 * np.pi, 200)
-y = np.sin(x)
 
-fig, ax = plt.subplots()
-ax.plot(x, y)
-plt.show()
-'''
 yield_values = []
 strain_yield = []
 tensile_values = []
@@ -97,45 +90,8 @@ print(fracture_point)
 
 measurement = Measurement(yield_point, tensile_point, fracture_point)
 measurement.stress_strain_plot()
-# plot_yield_value = sorted_yield_values[1]
-# plot_tensile_value = sorted_tensile_values[1]
-# plot_fracture_value = sorted_fracture_values[1]
-# plot_strain_yield_value = sorted_strain_yield[1]
-# plot_strain_tensile_value = sorted_strain_tensile[1]
-# plot_strain_fracture_value = sorted_strain_fracture[1]
 
 
 
-# yield1 = int(input("Please indicate the yield stress value"))
-# strain_yield1 = float(input("Please indicate the yield stress strain value"))
-#
-# tensile = int(input("Please indicate the tensile stress value"))
-# strain_tensile = float(input("Please indicate the tensile stress strain value"))
-#
-# fracture = int(input("Please indicate the fracture stress value"))
-# strain_fracture = float(input("Please indicate the fracture stress strain value"))
 
 
-
-# yield1 = 160
-# strain_yield1 = 0.02
-#
-# tensile = 215
-# strain_tensile = 0.08
-#
-# fracture = 190
-# strain_fracture = 0.16
-#
-# print(yield1)
-#
-# M1 = measurement.Measurement((yield1, strain_yield1), (tensile, strain_tensile) , (fracture, strain_fracture))
-# D = [(0, 0), (yield1, strain_yield1), (tensile, strain_tensile) , (fracture, strain_fracture)]
-# stress = np.array([d[0] for d in D])
-# strain = np.array([d[1] for d in D])
-#
-# plt.plot(strain, stress)
-# plt.xlabel('strain, mm')
-# plt.ylabel("stress, MPa")
-# plt.title("Stress-strain curve")
-# plt.grid(True)
-# plt.show()
